@@ -1,6 +1,6 @@
 import os
 
-DB_HOST = os.getenv("DB_HOST", "localhost")
+DB_HOST = os.getenv("DB_HOST", "mysql")
 DB_NAME = os.getenv("DB_NAME", "taskdb")
 DB_USER = os.getenv("DB_USER", "root")
 DB_PASSWORD = os.getenv("DB_PASSWORD", "root")

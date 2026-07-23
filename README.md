@@ -27,10 +27,13 @@ task-manager-docker-project/
 ├── requirements.txt
 ├── README.md
 └── k8s/
-    ├── flask-deployment.yml
-    ├── flask-service.yml
+    ├── app-deployment.yml
+    ├── app-service.yml
     ├── mysql-deployment.yml
-    └── mysql-service.yml
+    ├── mysql-service.yml
+    ├── ingress.yml
+    ├── config.yml
+    └── secrets.yml
 ```
 
 ---

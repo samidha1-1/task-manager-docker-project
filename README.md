@@ -37,7 +37,7 @@ http://app.samidhawani.in
 ---
 ## 📸 Application
 
-![Application](screenshots/)
+![Application](screenshots/application-png.png)
 
 ## 📸 Deployment Screenshots
 

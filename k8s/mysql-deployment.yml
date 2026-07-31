@@ -21,6 +21,9 @@ spec:
       containers:
       - name: mysql
         image: mysql:8
+        volumeMounts:
+          - name: mysql-storage
+            mountPath: /var/lib/mysql
 
         ports:
         - containerPort: 3306
@@ -31,5 +34,9 @@ spec:
 
         - name: MYSQL_DATABASE
           value: taskdb
-
+     
+      volumes:  
+        - name: mysql-storage
+          persistentVolumeClaim: 
+            claimName: mysql-pvc   
 

@@ -16,7 +16,7 @@ spec:
     spec:
       containers:
       - name: task-container
-        image: task-manager-docker-project-app:latest
-        imagePullPolicy: Never
+        image: samidha7/task-manager-app:v1
+        imagePullPolicy: Always
         ports:
         - containerPort: 5000

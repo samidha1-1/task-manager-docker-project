@@ -1,106 +1,212 @@
-#  Task Manager - Docker & Kubernetes Project
 
-A containerized Task Manager web application built with **Flask** and **MySQL**. The project demonstrates how to package an application using Docker, orchestrate multiple containers with Docker Compose, and deploy the application on Kubernetes.
+# 🚀 Task Manager API Deployment on Kubernetes (k3s)
 
----
-
-##  Tech Stack
-
-- Python (Flask)
-- MySQL
-- Docker
-- Docker Compose
-- Kubernetes
-- Minikube
-- kubectl
+A containerized **Task Manager REST API** deployed on an **AWS EC2** instance using **k3s Kubernetes**. The application is exposed using the **NGINX Ingress Controller** and is accessible through a custom domain.
 
 ---
 
-##  Project Structure
+## 🌐 Live Demo
 
+**URL:** http://app.samidhawani.in
+
+---
+
+# 🏗️ Architecture
+
+```text
+                        Internet
+                            │
+                            ▼
+                  app.samidhawani.in
+                            │
+                            ▼
+                    AWS EC2 (Ubuntu)
+                            │
+                            ▼
+              NGINX Ingress Controller
+                            │
+                            ▼
+                  Kubernetes Service
+                            │
+                            ▼
+                Task Manager API Pod
+                            │
+                            ▼
+                MySQL ClusterIP Service
+                            │
+                            ▼
+                        MySQL Pod
 ```
+
+---
+
+# 🛠️ Tech Stack
+
+- AWS EC2
+- Ubuntu Linux
+- Docker
+- Docker Hub
+- Kubernetes (k3s)
+- NGINX Ingress Controller
+- MySQL
+- Kubernetes Deployments
+- Kubernetes Services
+- Kubernetes Ingress
+- ConfigMaps
+- Secrets
+- Persistent Volume Claim (PVC)
+
+---
+
+# ✨ Features
+
+- REST API for Task Management
+- Dockerized Application
+- Kubernetes Deployment
+- MySQL Database
+- NGINX Ingress Controller
+- Custom Domain Configuration
+- Kubernetes ConfigMaps & Secrets
+- Persistent Storage for Database
+
+---
+
+# 📂 Project Structure
+
+```text
 task-manager-docker-project/
 │
 ├── app/
 ├── Dockerfile
-├── docker-compose.yml
 ├── requirements.txt
 ├── README.md
+│
 └── k8s/
-    ├── app-deployment.yml
-    ├── app-service.yml
-    ├── mysql-deployment.yml
-    ├── mysql-service.yml
-    ├── ingress.yml
-    ├── config.yml
-    └── secrets.yml
+    ├── configmap.yaml
+    ├── secret.yaml
+    ├── pvc.yaml
+    ├── mysql-deployment.yaml
+    ├── mysql-service.yaml
+    ├── task-deployment.yaml
+    ├── task-service.yaml
+    └── ingress.yaml
 ```
 
 ---
 
-## Features
+# 🚀 Deployment Steps
 
-- Create and manage tasks
-- Flask backend with MySQL database
-- Containerized using Docker
-- Multi-container deployment using Docker Compose
-- Kubernetes Deployment and Service manifests
-- Scalable application architecture
-
----
-
-## Docker Deployment
-
-### Build the Docker image
+Clone the repository
 
 ```bash
-docker build -t task-manager .
+git clone https://github.com/<your-username>/<repository-name>.git
+cd <repository-name>/k8s
 ```
 
-### Run using Docker Compose
+Deploy Kubernetes resources
 
 ```bash
-docker compose up -d
+kubectl apply -f secret.yaml
+kubectl apply -f configmap.yaml
+kubectl apply -f pvc.yaml
+kubectl apply -f mysql-deployment.yaml
+kubectl apply -f mysql-service.yaml
+kubectl apply -f task-deployment.yaml
+kubectl apply -f task-service.yaml
+kubectl apply -f ingress.yaml
 ```
 
-Verify running containers:
-
-```bash
-docker ps
-```
-
----
-
-## Kubernetes Deployment
-
-Apply all Kubernetes manifests:
-
-```bash
-kubectl apply -f k8s/
-```
-
-Verify resources:
+Verify deployment
 
 ```bash
 kubectl get pods
-kubectl get deployments
-kubectl get services
+kubectl get svc
+kubectl get ingress
 ```
-
-
-## Learning Outcomes
-
-- Wrote a production-ready Dockerfile
-- Built and managed Docker images
-- Used Docker Compose for multi-container applications
-- Created Kubernetes Deployments
-- Exposed applications using Kubernetes Services
-- Verified application deployment using kubectl
 
 ---
 
-## Author
+# 🌍 Domain Configuration
+
+Configured a custom domain using **GoDaddy DNS**.
+
+```
+app.samidhawani.in
+        │
+        ▼
+AWS EC2 Public IP
+        │
+        ▼
+NGINX Ingress Controller
+        │
+        ▼
+Task Manager API
+```
+
+---
+
+# 🔧 Challenges Solved
+
+- Configured custom domain with GoDaddy.
+- Deployed application on a single-node Kubernetes cluster using **k3s**.
+- Replaced the default **Traefik Ingress Controller** with the **NGINX Ingress Controller**.
+- Configured **hostNetwork** for direct access on ports **80** and **443**.
+- Troubleshot Kubernetes networking and Ingress routing.
+- Verified Kubernetes Deployments, Services, Pods, and Ingress resources.
+- Successfully exposed the application using a custom domain.
+
+---
+
+# 📸 Screenshots
+
+Add screenshots here after deployment.
+
+```text
+screenshots/
+│
+├── application.png
+├── kubectl-get-pods.png
+├── kubectl-get-services.png
+├── kubectl-get-ingress.png
+└── architecture.png
+```
+
+---
+
+# 🚀 Future Improvements
+
+- Jenkins CI/CD Pipeline
+- HTTPS using Cert-Manager & Let's Encrypt
+- Helm Chart
+- Monitoring with Prometheus & Grafana
+- Deploy on Amazon EKS
+- Horizontal Pod Autoscaler (HPA)
+
+---
+
+# 📚 Skills Demonstrated
+
+- AWS EC2
+- Linux Administration
+- Docker
+- Docker Hub
+- Kubernetes (k3s)
+- NGINX Ingress Controller
+- Kubernetes Deployments
+- Kubernetes Services
+- Kubernetes Ingress
+- ConfigMaps
+- Secrets
+- Persistent Storage
+- DNS Configuration
+- Kubernetes Troubleshooting
+
+---
+
+# 👩‍💻 Author
 
 **Samidha Wani**
 
 GitHub: https://github.com/samidha1-1
+
+LinkedIn: *(Add your LinkedIn profile here)*

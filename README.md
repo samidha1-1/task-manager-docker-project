@@ -157,22 +157,6 @@ Task Manager API
 
 ---
 
-# 📸 Screenshots
-
-Add screenshots here after deployment.
-
-```text
-screenshots/
-│
-├── application.png
-├── kubectl-get-pods.png
-├── kubectl-get-services.png
-├── kubectl-get-ingress.png
-└── architecture.png
-```
-
----
-
 # 🚀 Future Improvements
 
 - Jenkins CI/CD Pipeline

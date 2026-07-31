@@ -1,60 +1,55 @@
+# 🚀 Task Manager API on AWS EC2 using k3s Kubernetes
 
-# 🚀 Task Manager API Deployment on Kubernetes (k3s)
-
-A containerized **Task Manager REST API** deployed on an **AWS EC2** instance using **k3s Kubernetes**. The application is exposed using the **NGINX Ingress Controller** and is accessible through a custom domain.
-
----
-
-## 🌐 Live Demo
-
-**URL:** http://app.samidhawani.in
+Brief description of the project.
 
 ---
 
-# 🏗️ Architecture
+## 🏗️ Architecture
 
-```text
-                        Internet
-                            │
-                            ▼
-                  app.samidhawani.in
-                            │
-                            ▼
-                    AWS EC2 (Ubuntu)
-                            │
-                            ▼
-              NGINX Ingress Controller
-                            │
-                            ▼
-                  Kubernetes Service
-                            │
-                            ▼
-                Task Manager API Pod
-                            │
-                            ▼
-                MySQL ClusterIP Service
-                            │
-                            ▼
-                        MySQL Pod
-```
+![Architecture](screenshots/architecture-diagram.png)
 
 ---
 
-# 🛠️ Tech Stack
+## 🌐 Domain Name 
+
+http://app.samidhawani.in
+
+---
+
+## 📸 Application
+
+![Application](screenshots/domain-working.png)
+
+---
+
+## 🛠️ Tech Stack
 
 - AWS EC2
-- Ubuntu Linux
+- Ubuntu
 - Docker
 - Docker Hub
 - Kubernetes (k3s)
 - NGINX Ingress Controller
 - MySQL
-- Kubernetes Deployments
-- Kubernetes Services
-- Kubernetes Ingress
 - ConfigMaps
 - Secrets
 - Persistent Volume Claim (PVC)
+
+---
+
+## 📸 Deployment Screenshots
+
+### Kubernetes Pods
+
+![Pods](screenshots/kubectl-pod.png)
+
+### Kubernetes Services
+
+![Services](screenshots/kubectl-svc.png)
+
+### Kubernetes Ingress
+
+![Ingress](screenshots/kubectl-ingress.png)
 
 ---
 

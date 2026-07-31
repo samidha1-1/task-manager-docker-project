@@ -1,6 +1,5 @@
 # 🚀 Task Manager API on AWS EC2 using k3s Kubernetes
-
-Brief description of the project.
+A containerized **Task Manager REST API** deployed on an **AWS EC2** instance using **k3s Kubernetes**. The application is exposed using the **NGINX Ingress Controller** and is accessible through a custom domain.
 
 ---
 
@@ -188,4 +187,4 @@ Task Manager API
 
 GitHub: https://github.com/samidha1-1
 
-LinkedIn: *(Add your LinkedIn profile here)*
+LinkedIn: *https://www.linkedin.com/in/samidha-wani-411549285/*

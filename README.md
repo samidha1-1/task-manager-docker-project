@@ -15,7 +15,7 @@ http://app.samidhawani.in
 
 ---
 
-## 📸 Application
+## 📸 Domain Mapping
 
 ![Application](screenshots/domain-working.png)
 
@@ -35,6 +35,9 @@ http://app.samidhawani.in
 - Persistent Volume Claim (PVC)
 
 ---
+## 📸 Application
+
+![Application](screenshots/)
 
 ## 📸 Deployment Screenshots
 
